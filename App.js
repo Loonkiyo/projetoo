@@ -14,128 +14,128 @@ import {
 } from 'react-native';
 
 const THEME = {
-  bg: '#09090B',
-  surface: '#131316',
-  surfaceAlt: '#0E0E11',
-  border: '#232329',
+  bg: '#0F0F12',
+  surface: '#1A1A1E',
+  surfaceAlt: '#141416',
+  border: '#2A2A30',
   textPrimary: '#F4F4F5',
   textSecondary: '#A1A1AA',
-  textTertiary: '#6B6B74',
-  accent: '#6366F1',
-  accentSoft: 'rgba(99,102,241,0.14)',
-  gold: '#EAB308',
+  textTertiary: '#71717A',
+  accent: '#E50914',
+  accentSoft: 'rgba(229,9,20,0.15)',
+  gold: '#FACC15',
   success: '#22C55E',
 };
 
 const CONTENT_MAX_WIDTH = 1120;
 
-const GAMES = [
+const MOVIES = [
   {
     id: '1',
-    title: 'Valorant',
-    category: 'FPS',
+    title: 'Duna: Parte 2',
+    category: 'Ficção Científica',
     rating: '4.8',
-    platform: 'PC',
-    year: '2020',
-    hours: '342 h',
-    color: '#FF4655',
-    desc: 'FPS tático 5v5 da Riot Games, focado em precisão, gestão de utilitários e trabalho em equipe.',
-    image: 'https://tse3.mm.bing.net/th/id/OIP.ObRT-43dOSCPLvYUMDyyDgAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+    platform: 'Denis Villeneuve',
+    year: '2024',
+    duration: '2h 46m',
+    color: '#E50914',
+    desc: 'Paul Atreides se une aos Fremen para travar guerra contra a Casa Harkonnen. Épico sci-fi com fotografia grandiosa e trilha de Hans Zimmer.',
+    image: 'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg',
   },
   {
     id: '2',
-    title: 'Elden Ring',
-    category: 'RPG',
+    title: 'Oppenheimer',
+    category: 'Drama',
     rating: '4.9',
-    platform: 'PS5 · PC',
-    year: '2022',
-    hours: '210 h',
+    platform: 'Christopher Nolan',
+    year: '2023',
+    duration: '3h 01m',
     color: '#C9A86A',
-    desc: 'RPG de ação em mundo aberto da FromSoftware, com exploração desafiadora e narrativa profunda.',
-    image: 'https://tse2.mm.bing.net/th/id/OIP.qi-NaOzhyKV4a6pHQ4UfYQHaC_?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+    desc: 'A história do físico J. Robert Oppenheimer e seu papel no desenvolvimento da bomba atômica. Vencedor do Oscar de Melhor Filme.',
+    image: 'https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg',
   },
   {
     id: '3',
-    title: 'League of Legends',
-    category: 'MOBA',
-    rating: '4.6',
-    platform: 'PC',
-    year: '2009',
-    hours: '890 h',
-    color: '#0AC8B9',
-    desc: 'MOBA competitivo 5v5 da Riot Games e um dos títulos mais relevantes do cenário de esports.',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.xEs_Cxxm4UfQtXsjVEP_sQHaC5?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+    title: 'Homem-Aranha: Através do Aranhaverso',
+    category: 'Animação',
+    rating: '4.8',
+    platform: 'Joaquim Dos Santos',
+    year: '2023',
+    duration: '2h 20m',
+    color: '#E50914',
+    desc: 'Miles Morales atravessa o multiverso e encontra uma equipe de Pessoas-Aranha encarregada de proteger sua existência.',
+    image: 'https://image.tmdb.org/t/p/w500/sh7Rg8Er3tCdSvY0c5yGK3nsRL.jpg',
   },
   {
     id: '4',
-    title: 'Fortnite',
-    category: 'Battle Royale',
-    rating: '4.5',
-    platform: 'Multiplataforma',
-    year: '2017',
-    hours: '156 h',
-    color: '#FFE812',
-    desc: 'Battle Royale desenvolvido pela Epic Games, conhecido pelo sistema de construção e atualizações constantes.',
-    image: 'https://tse2.mm.bing.net/th/id/OIP._CMzl1DLqliORf8P391YRgHaEK?r=0&w=1280&h=720&rs=1&pid=ImgDetMain&o=7&rm=3',
+    title: 'John Wick 4: Baba Yaga',
+    category: 'Ação',
+    rating: '4.6',
+    platform: 'Chad Stahelski',
+    year: '2023',
+    duration: '2h 49m',
+    color: '#27272A',
+    desc: 'John Wick descobre um caminho para derrotar a Alta Cúpula, mas precisa enfrentar um novo inimigo com alianças poderosas.',
+    image: 'https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg',
   },
   {
     id: '5',
-    title: 'God of War Ragnarök',
-    category: 'Aventura',
+    title: 'Parasita',
+    category: 'Drama',
     rating: '4.9',
-    platform: 'PS5',
-    year: '2022',
-    hours: '78 h',
-    color: '#4A90E2',
-    desc: 'Aventura de ação da Santa Monica Studio que conclui a saga nórdica de Kratos e Atreus.',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.7PpvVFDc7ZKoDWHcIVoXXgHaCe?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+    platform: 'Bong Joon-ho',
+    year: '2019',
+    duration: '2h 12m',
+    color: '#A16207',
+    desc: 'Família desempregada se infiltra na casa de uma família rica, desencadeando uma série de eventos inesperados. Palma de Ouro e Oscar.',
+    image: 'https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg',
   },
   {
     id: '6',
-    title: 'Cyberpunk 2077',
-    category: 'RPG',
-    rating: '4.4',
-    platform: 'PC · PS5',
-    year: '2020',
-    hours: '112 h',
-    color: '#FCEE0A',
-    desc: 'RPG de mundo aberto ambientado em Night City, com narrativa ramificada e alta personalização.',
-    image: 'https://th.bing.com/th/id/R.0ad4dce80988a9ebf96606a47459e2a3?rik=90nSJNgB2KbH9g&pid=ImgRaw&r=0',
+    title: 'Vingadores: Ultimato',
+    category: 'Ação',
+    rating: '4.7',
+    platform: 'Anthony Russo',
+    year: '2019',
+    duration: '3h 01m',
+    color: '#7F1D1D',
+    desc: 'Após Thanos eliminar metade das criaturas vivas, os Vingadores precisam se reunir para desfazer suas ações e restaurar a ordem.',
+    image: 'https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg',
   },
   {
     id: '7',
-    title: 'Call of Duty: MW III',
-    category: 'FPS',
-    rating: '4.3',
-    platform: 'Multiplataforma',
-    year: '2023',
-    hours: '203 h',
-    color: '#737373',
-    desc: 'FPS com campanha cinematográfica e multiplayer competitivo de alta intensidade.',
-    image: 'https://th.bing.com/th/id/R.15a7f372a79b00baa3b6308e0d68b7c6?rik=mWZTfjNoW3m5zA&pid=ImgRaw&r=0',
+    title: 'Interestelar',
+    category: 'Ficção Científica',
+    rating: '4.9',
+    platform: 'Christopher Nolan',
+    year: '2014',
+    duration: '2h 49m',
+    color: '#0E7490',
+    desc: 'Um grupo de exploradores viaja através de um buraco de minhoca no espaço na tentativa de garantir a sobrevivência da humanidade.',
+    image: 'https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg',
   },
   {
     id: '8',
-    title: 'The Witcher 3',
-    category: 'RPG',
+    title: 'O Poderoso Chefão',
+    category: 'Crime',
     rating: '4.9',
-    platform: 'Multiplataforma',
-    year: '2015',
-    hours: '315 h',
-    color: '#B45309',
-    desc: 'RPG premiado da CD Projekt Red, reconhecido pela qualidade da narrativa e pelo mundo detalhado.',
-    image: 'https://th.bing.com/th/id/R.6b7c342cdc7670991612c3d98bea429c?rik=HDkmqa6lPQOS%2bA&pid=ImgRaw&r=0',
+    platform: 'Francis Ford Coppola',
+    year: '1972',
+    duration: '2h 55m',
+    color: '#44403C',
+    desc: 'O patriarca de uma dinastia do crime organizado transfere o controle de seu império clandestino para seu filho relutante.',
+    image: 'https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg',
   },
 ];
 
-const CATEGORIES = ['Todos', 'FPS', 'RPG', 'MOBA', 'Battle Royale', 'Aventura'];
+const CATEGORIES = ['Todos', 'Ação', 'Ficção Científica', 'Drama', 'Animação', 'Crime'];
 
 export default function App() {
   const [search, setSearch] = useState('');
   const [activeCat, setActiveCat] = useState('Todos');
   const [favorites, setFavorites] = useState(['1', '3']);
   const [tab, setTab] = useState('home');
-  const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   const { width } = useWindowDimensions();
   const columns = width >= 1280 ? 3 : width >= 820 ? 2 : 1;
@@ -144,29 +144,29 @@ export default function App() {
     setFavorites((prev) => (prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]));
   };
 
-  const favoriteGames = useMemo(
-    () => GAMES.filter((g) => favorites.includes(g.id)),
+  const favoriteMovies = useMemo(
+    () => MOVIES.filter((m) => favorites.includes(m.id)),
     [favorites]
   );
 
   const filtered = useMemo(() => {
     const normalizedSearch = search.trim().toLowerCase();
     const normalizedCat = activeCat.trim().toLowerCase();
-    return GAMES.filter((g) => {
-      const matchSearch = !normalizedSearch || g.title.toLowerCase().includes(normalizedSearch);
-      const matchCategory = normalizedCat === 'todos' || g.category.trim().toLowerCase() === normalizedCat;
-      const matchTab = tab !== 'favs' || favorites.includes(g.id);
+    return MOVIES.filter((m) => {
+      const matchSearch = !normalizedSearch || m.title.toLowerCase().includes(normalizedSearch);
+      const matchCategory = normalizedCat === 'todos' || m.category.trim().toLowerCase() === normalizedCat;
+      const matchTab = tab !== 'favs' || favorites.includes(m.id);
       return matchSearch && matchCategory && matchTab;
     });
   }, [search, activeCat, favorites, tab]);
 
   const renderCard = ({ item }) => (
     <View style={styles.cardSlot}>
-      <GameCard
-        game={item}
+      <MovieCard
+        movie={item}
         isFavorite={favorites.includes(item.id)}
         onToggleFavorite={() => toggleFavorite(item.id)}
-        onPress={() => setSelectedGame(item)}
+        onPress={() => setSelectedMovie(item)}
       />
     </View>
   );
@@ -178,11 +178,11 @@ export default function App() {
       <View style={styles.screen}>
         <View style={styles.header}>
           <View>
-            <Text style={styles.headerLogo}>GAMEVAULT</Text>
-            <Text style={styles.headerTagline}>SUA BIBLIOTECA GAMER</Text>
+            <Text style={styles.headerLogo}>CINEVAULT</Text>
+            <Text style={styles.headerTagline}>SUA CINEMATECA</Text>
           </View>
           <View style={styles.headerAvatar}>
-            <Text style={styles.avatarInitials}>GG</Text>
+            <Text style={styles.avatarInitials}>CV</Text>
           </View>
         </View>
 
@@ -198,12 +198,12 @@ export default function App() {
         </View>
 
         {tab === 'profile' ? (
-          <ProfileView favoriteGames={favoriteGames} />
+          <ProfileView favoriteMovies={favoriteMovies} />
         ) : (
           <>
             <View style={styles.searchWrap}>
               <TextInput
-                placeholder="Buscar por título..."
+                placeholder="Buscar por filme..."
                 placeholderTextColor={THEME.textTertiary}
                 value={search}
                 onChangeText={setSearch}
@@ -236,7 +236,7 @@ export default function App() {
             </ScrollView>
 
             <View style={styles.infoBar}>
-              <Text style={styles.infoCount}>{filtered.length} títulos</Text>
+              <Text style={styles.infoCount}>{filtered.length} filmes</Text>
               <Text style={styles.infoFilter}>
                 {activeCat === 'Todos' ? 'TODOS OS GÊNEROS' : activeCat.toUpperCase()}
               </Text>
@@ -253,9 +253,9 @@ export default function App() {
               showsVerticalScrollIndicator={false}
               ListEmptyComponent={
                 <View style={styles.emptyWrap}>
-                  <Text style={styles.emptyTitle}>Nenhum título encontrado</Text>
+                  <Text style={styles.emptyTitle}>Nenhum filme encontrado</Text>
                   <Text style={styles.emptySubtitle}>
-                    Ajuste a busca ou selecione outra categoria.
+                    Ajuste a busca ou selecione outro gênero.
                   </Text>
                 </View>
               }
@@ -265,81 +265,81 @@ export default function App() {
       </View>
 
       <Modal
-        visible={!!selectedGame}
+        visible={!!selectedMovie}
         animationType="slide"
         transparent
-        onRequestClose={() => setSelectedGame(null)}
+        onRequestClose={() => setSelectedMovie(null)}
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
-            {selectedGame && (
+            {selectedMovie && (
               <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={[styles.modalImageWrap]}>
                   <Image
-                    source={{ uri: selectedGame.image }}
+                    source={{ uri: selectedMovie.image }}
                     style={styles.modalImage}
                     resizeMode="cover"
                   />
                   <View style={styles.imageOverlayTop} />
                   <View style={styles.imageOverlayBottom} />
                   <View style={styles.modalRatingBadge}>
-                    <Text style={styles.modalRatingBadgeText}>★ {selectedGame.rating}</Text>
+                    <Text style={styles.modalRatingBadgeText}>★ {selectedMovie.rating}</Text>
                   </View>
                 </View>
 
                 <View style={styles.modalHeader}>
                   <View style={styles.modalHeadingGroup}>
-                    <Text style={styles.modalTitle}>{selectedGame.title}</Text>
+                    <Text style={styles.modalTitle}>{selectedMovie.title}</Text>
                     <Text style={styles.modalMeta}>
-                      {selectedGame.platform} · {selectedGame.year}
+                      {selectedMovie.platform} · {selectedMovie.year}
                     </Text>
                   </View>
                   <View
                     style={[
                       styles.categoryPill,
-                      { borderColor: selectedGame.color },
+                      { borderColor: selectedMovie.color },
                     ]}
                   >
-                    <View style={[styles.categoryDot, { backgroundColor: selectedGame.color }]} />
-                    <Text style={[styles.categoryPillText, { color: selectedGame.color }]}>
-                      {selectedGame.category.toUpperCase()}
+                    <View style={[styles.categoryDot, { backgroundColor: selectedMovie.color }]} />
+                    <Text style={[styles.categoryPillText, { color: selectedMovie.color }]}>
+                      {selectedMovie.category.toUpperCase()}
                     </Text>
                   </View>
                 </View>
 
                 <Text style={styles.sectionLabel}>SINOPSE</Text>
-                <Text style={styles.modalDescription}>{selectedGame.desc}</Text>
+                <Text style={styles.modalDescription}>{selectedMovie.desc}</Text>
 
-                <Text style={styles.sectionLabel}>ESTATÍSTICAS</Text>
+                <Text style={styles.sectionLabel}>DETALHES</Text>
                 <View style={styles.modalStats}>
-                  <StatBox value={selectedGame.hours} label="TEMPO JOGADO" />
-                  <StatBox value={`${selectedGame.rating}/5`} label="AVALIAÇÃO" />
-                  <StatBox value={selectedGame.year} label="LANÇAMENTO" />
+                  <StatBox value={selectedMovie.duration} label="DURAÇÃO" />
+                  <StatBox value={`${selectedMovie.rating}/5`} label="AVALIAÇÃO" />
+                  <StatBox value={selectedMovie.year} label="LANÇAMENTO" />
                 </View>
 
                 <View style={styles.modalActions}>
                   <TouchableOpacity
                     style={styles.primaryButton}
                     activeOpacity={0.8}
-                    onPress={() => setSelectedGame(null)}
+                    onPress={() => setSelectedMovie(null)}
                   >
-                    <Text style={styles.primaryButtonText}>JOGAR AGORA</Text>
+                    <Text style={styles.primaryButtonText}>ASSISTIR AGORA</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
                     style={[
                       styles.secondaryButton,
-                      favorites.includes(selectedGame.id) && styles.secondaryButtonActive,
+                      favorites.includes(selectedMovie.id) && styles.secondaryButtonActive,
                     ]}
                     activeOpacity={0.8}
-                    onPress={() => toggleFavorite(selectedGame.id)}
+                    onPress={() => toggleFavorite(selectedMovie.id)}
                   >
                     <Text style={styles.secondaryButtonText}>
-                      {favorites.includes(selectedGame.id) ? 'FAVORITADO' : 'FAVORITAR'}
+                      {favorites.includes(selectedMovie.id) ? 'FAVORITADO' : 'FAVORITAR'}
                     </Text>
                   </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={styles.closeButton} onPress={() => setSelectedGame(null)}>
+                <TouchableOpacity style={styles.closeButton} onPress={() => setSelectedMovie(null)}>
                   <Text style={styles.closeButtonText}>Fechar</Text>
                 </TouchableOpacity>
               </ScrollView>
@@ -351,19 +351,19 @@ export default function App() {
   );
 }
 
-function GameCard({ game, isFavorite, onToggleFavorite, onPress }) {
+function MovieCard({ movie, isFavorite, onToggleFavorite, onPress }) {
   return (
     <TouchableOpacity style={styles.card} activeOpacity={0.85} onPress={onPress}>
-      <View style={[styles.cardBanner, { backgroundColor: game.color }]}>
+      <View style={[styles.cardBanner, { backgroundColor: movie.color }]}>
         <Image
-          source={{ uri: game.image }}
+          source={{ uri: movie.image }}
           style={styles.cardImage}
           resizeMode="cover"
         />
         <View style={styles.imageOverlayTop} />
         <View style={styles.imageOverlayBottom} />
         <View style={styles.cardRatingBadge}>
-          <Text style={styles.cardRatingText}>★ {game.rating}</Text>
+          <Text style={styles.cardRatingText}>★ {movie.rating}</Text>
         </View>
         <TouchableOpacity style={styles.favoriteButton} onPress={onToggleFavorite} hitSlop={8}>
           <Text style={[styles.favoriteIcon, isFavorite && styles.favoriteIconActive]}>
@@ -372,14 +372,14 @@ function GameCard({ game, isFavorite, onToggleFavorite, onPress }) {
         </TouchableOpacity>
       </View>
       <View style={styles.cardInfo}>
-        <Text style={styles.cardTitle} numberOfLines={1}>{game.title}</Text>
+        <Text style={styles.cardTitle} numberOfLines={1}>{movie.title}</Text>
         <View style={styles.cardMetaRow}>
-          <View style={[styles.categoryDot, { backgroundColor: game.color }]} />
-          <Text style={styles.cardCategory}>{game.category.toUpperCase()}</Text>
+          <View style={[styles.categoryDot, { backgroundColor: movie.color }]} />
+          <Text style={styles.cardCategory}>{movie.category.toUpperCase()}</Text>
           <Text style={styles.cardSeparator}>·</Text>
-          <Text style={styles.cardMetaText}>{game.platform}</Text>
+          <Text style={styles.cardMetaText}>{movie.platform}</Text>
         </View>
-        <Text style={styles.cardHours}>{game.hours} jogadas · {game.year}</Text>
+        <Text style={styles.cardHours}>{movie.duration} · {movie.year}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -421,7 +421,7 @@ function AchievementItem({ title, description }) {
   );
 }
 
-function ProfileView({ favoriteGames }) {
+function ProfileView({ favoriteMovies }) {
   return (
     <ScrollView
       style={styles.profileScroll}
@@ -430,10 +430,10 @@ function ProfileView({ favoriteGames }) {
     >
       <View style={styles.profileCard}>
         <View style={styles.profileAvatar}>
-          <Text style={styles.profileAvatarText}>GG</Text>
+          <Text style={styles.profileAvatarText}>CV</Text>
         </View>
-        <Text style={styles.profileName}>Gustavo Gomes</Text>
-        <Text style={styles.profileRank}>Nível 42 · Rank Lendário</Text>
+        <Text style={styles.profileName}>Cinevault</Text>
+        <Text style={styles.profileRank}>Nível 42 · Cinéfilo Lendário</Text>
         <View style={styles.xpBarTrack}>
           <View style={styles.xpBarFill} />
         </View>
@@ -441,35 +441,35 @@ function ProfileView({ favoriteGames }) {
       </View>
 
       <View style={styles.statsGrid}>
-        <StatBox value={GAMES.length} label="JOGOS" />
-        <StatBox value={favoriteGames.length} label="FAVORITOS" />
-        <StatBox value="1.890" label="HORAS" />
-        <StatBox value="127" label="CONQUISTAS" />
+        <StatBox value={MOVIES.length} label="FILMES" />
+        <StatBox value={favoriteMovies.length} label="FAVORITOS" />
+        <StatBox value="324" label="HORAS" />
+        <StatBox value="127" label="AVALIAÇÕES" />
       </View>
 
       <Text style={styles.sectionLabel}>CONQUISTAS RECENTES</Text>
       <View style={styles.achievementsList}>
-        <AchievementItem title="Maratonista" description="100 horas registradas em um único mês." />
-        <AchievementItem title="Mira de Ouro" description="1.000 abates certeiros em Valorant." />
-        <AchievementItem title="Platina Completa" description="Progresso de 100% em Elden Ring." />
+        <AchievementItem title="Maratonista" description="50 filmes assistidos em um único mês." />
+        <AchievementItem title="Crítico de Ouro" description="500 avaliações com nota máxima." />
+        <AchievementItem title="Cinéfilo Completo" description="Assistiu todos os vencedores do Oscar 2023." />
       </View>
 
       <Text style={styles.sectionLabel}>FAVORITOS ATUAIS</Text>
-      {favoriteGames.length === 0 ? (
+      {favoriteMovies.length === 0 ? (
         <Text style={styles.emptyFavorites}>
           Nenhum favorito selecionado até o momento.
         </Text>
       ) : (
-        favoriteGames.map((g) => (
-          <View key={g.id} style={styles.favoriteRow}>
-            <View style={[styles.categoryDot, { backgroundColor: g.color }]} />
+        favoriteMovies.map((m) => (
+          <View key={m.id} style={styles.favoriteRow}>
+            <View style={[styles.categoryDot, { backgroundColor: m.color }]} />
             <View style={styles.favoriteRowInfo}>
-              <Text style={styles.favoriteRowTitle}>{g.title}</Text>
+              <Text style={styles.favoriteRowTitle}>{m.title}</Text>
               <Text style={styles.favoriteRowSub}>
-                {g.category} · {g.hours}
+                {m.category} · {m.duration}
               </Text>
             </View>
-            <Text style={styles.favoriteRowRating}>★ {g.rating}</Text>
+            <Text style={styles.favoriteRowRating}>★ {m.rating}</Text>
           </View>
         ))
       )}

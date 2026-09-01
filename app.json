@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "GAMEVAULT",
-    "slug": "projeto-gamer",
+    "name": "CINEVAULT",
+    "slug": "projeto-filmes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0B0E14"
+      "backgroundColor": "#0F0F12"
     },
     "ios": {
       "supportsTablet": true
@@ -18,7 +18,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0B0E14"
+        "backgroundColor": "#0F0F12"
       },
       "edgeToEdgeEnabled": true
     },
